@@ -1,0 +1,27 @@
+/* master css styles - remove the grid */
+    * {
+     margin:0;
+     padding:0;
+    }
+
+
+.container {
+  /* Hero image */
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: url(images/black-background.jpg) no-repeat left;
+  /* background: fff; */
+  background-size: cover;
+  /* padding: 25px 0 0 20px; */
+  /* Hero image */
+}
+
+.container > * {
+  /* color: #d0cfc5; */
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px 20px 0 20px;
+  /* background: #d0cfc5; */
+  /* background: #f7f8f9; */
+}

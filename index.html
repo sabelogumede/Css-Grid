@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <title>Home Page</title>
+    <!-- <link rel="stylesheet" href="/css/master.css"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+        <!-- heder and navigation -->
+        <header>
+          <div class="item1"><h1><span><a href="index.html">subzero</a></span></h1></div>
+          <div class="item2"><a class="toggle open" href="#nav"><i class="fa fa-bars"></i></a></div>
+        </header>
+
+        <nav id="nav" role="navigation">
+          <a class="toggle close" href="#"><span>&times;</span></a>
+          <!-- you might also want to use a “×” -->
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- heder and navigation -->
+
+        <!-- hero text -->
+        <div class="hero_text item item2">
+          <!-- Brand Container Overlay -->
+           <h1> <span>subzero</span> </h1>
+           <span class="des">Web Developer // Web Designer</span>
+           <a class="btn" href="portfolio.html">Portfolio</a>
+        </div>
+
+        <div class="hero_bottomText item item3">
+          bottom
+        </div>
+
+    </div>
+
+
+    <style>
+     /* master css styles - remove the grid */
+    * {
+     margin:0;
+     padding:0;
+    }
+      .container {
+        /* Hero image */
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        background: url(images/face3.jpeg) no-repeat left;
+        /*  */
+        background-size: cover;
+        padding: 25px 0 0 20px;
+        /* Hero image */
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 100px 750px 50px;
+        grid-template-areas:
+           "nav nav nav"
+           "hero_text hero_text hero_text"
+           "hero_bottomText hero_bottomText hero_bottomText"
+      }
+/* master css styles */
+
+      .item3 {
+        background: #d0cfc5;
+        align-items: end;
+      }
+      .nav {
+        grid-area: nav;
+      }
+      .hero_text {
+        grid-area: hero_text;
+      }
+      .hero_bottomText {
+        grid-area: hero_bottomText;
+      }
+
+      /* nav */
+      .wrapper{
+        width: 100%;
+        opacity: 0.8;
+      }
+
+      .rightNav {
+        width: 100%;
+        /* background: #313131; */
+        text-align: left;
+        margin-top: 0;
+        padding: 0;
+        float: left;
+        border-bottom: 2px solid pink;
+      }
+
+      .hero_text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* overflow: hidden; */
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .hero_text h1{
+        /* for smaller screen use small font-size */
+        font-size: 8vw;
+        letter-spacing: 0.2em;
+        margin: 0;
+      }
+
+      .hero_text h1 span{
+        /* for smaller screen use small border-size */
+        border: 0.4vw solid white;
+        padding: 6px 14px;
+        display: inline-block;
+      }
+
+      .des{
+        margin: 20px;
+        display: block;
+        font-size: 2.3vw;
+        text-shadow: 0 0 10px black;
+      }
+
+      .btn{
+        color: #313131;
+        padding: 10px 24px;
+        font-size: 20px;
+        text-decoration: none;
+        background: #e91e63;
+        border-radius: 8px;
+        transition: 0.3s all;
+      }
+
+      .btn:hover{
+        opacity: 0.5;
+      }
+
+      @media only screen and (max-width: 600px) {
+
+        .hero_text h1 {font-size: 12vw;}
+        .hero_text h1 span {border: 0.7vw solid white;}
+        .des {font-size: 4vw;}
+
+      }
+
+
+</style>
+
+    <!--  script for the modal-->
+   <!-- <script type="text/javascript" src="modal.js"></script> -->
+
+  </body>
+</html>

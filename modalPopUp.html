@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>myModal</title>
+
+  </head>
+  <body>
+
+          <!-- Trigger/Open The Modal -->
+      <button id="myBtn">Open Modal</button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+         <span class="close">&times;</span>
+
+          <!-- Form inside modal -->
+
+          <div class="container">
+            <form action="action_page.php">
+
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+              <input type="submit" value="Submit">
+
+            </form>
+          </div>
+
+         <!-- Form inside modal -->
+        </div>
+      </div>
+
+     <link rel="stylesheet" href="styles/modal.css">
+
+     <script type="text/javascript" src="modal.js"></script>
+
+
+
+  </body>
+</html>

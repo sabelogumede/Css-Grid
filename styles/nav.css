@@ -1,0 +1,127 @@
+/*  head and navigation*/
+header {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+header .item2 {
+  text-align: right;
+
+}
+.item2 a {
+  color: #1081f2;
+
+}
+
+.item2 i {
+  /* border: 2px solid #fff; */
+  font-size: 42px;
+  /* margin-top: 2px; */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #d0cfc5;
+  text-decoration: none;
+}
+
+ul li {
+  color: #d0cfc5;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+ul li:hover {
+  background: #e91e63;
+  opacity: 0.5;
+}
+
+/* nav styles */
+nav ul li {
+  /* display: inline-block; */
+  display: block;
+  padding: 0 20px 0 0;
+}
+
+.item1 h1{
+  /* for smaller screen use small font-size */
+  font-size: 30px;
+
+  /* letter-spacing: 0.1em; */
+  margin: 0;
+  text-align: left;
+  color: white;
+  /* font-weight: 700; */
+  text-transform: uppercase;
+}
+
+.item1 h1 span{
+  /* for smaller screen use small border-size */
+  border: 3px solid black;
+  padding: 1px 3px;
+  display: inline-block;
+  poi
+}
+.item1 a {
+  text-decoration: none;
+  color: black;
+}
+
+#nav .toggle span {
+  font-size: 30px;
+  color: #1081f2;
+}
+
+@media only screen and (min-width: 600px) {
+
+  /* ul li {
+    font-size: 30px;
+  } */
+
+  #nav {
+      position: fixed; /* or choose `absolute` depending on desired behavior*/
+      top: 0;
+      bottom: 0;
+      width: 400px;
+      right: -450px;
+      transition: transform .3s ease-in-out;
+      background: white;
+      z-index: 2;
+
+  }
+  /* slide in out nav */
+  #nav:target {
+   transform: translateX(-420px);
+  }
+
+}
+/*  end of media query*/
+
+@media only screen and (max-width: 599px) {
+
+  ul li {
+    font-size: 20px;
+  }
+
+    #nav {
+        position: fixed; /* or choose `absolute` depending on desired behavior*/
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        left: 625px;
+        transition: transform .3s ease-in-out;
+        background: white;
+        z-index: 2;
+    }
+    /* slide in out nav */
+    #nav:target {
+     transform: translateX(-380px);
+    }
+}

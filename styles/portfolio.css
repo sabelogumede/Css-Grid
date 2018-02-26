@@ -1,0 +1,119 @@
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 100px auto 100px;
+  grid-gap: 10px;
+  }
+
+/* album container */
+.container section {
+            display: grid;
+            /* border: 2px dashed rgba(114, 186, 94, 0.35); */
+            height: auto;
+            /* change background color */
+
+            grid-template-columns:  minmax( 800px, 70%);
+            grid-template-rows: auto;
+            grid-row: 10px;
+            /* background: rgba(114, 186, 94, 0.05); */
+            justify-content: center;
+            }
+/* apply this style to the dactivated span in the - Breadcram list */
+.container section h2 {
+                     font-size: 0.8vw;
+                     /* deactive tab in the breadcram spans! */
+                     color: #d0cfc5;
+            }
+/* Album grid */
+
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 20px;
+}
+
+.album {
+  /* border-radius: 25px; */
+  background: #fcfcfc;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.23);
+  padding: 2px;
+  width: inherit;
+  color: black;
+  font-size: 16px;
+}
+
+.album:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.album__artwork {
+  width: 100%;
+}
+.album__details {
+  padding: 10px;
+}
+
+article .icon-bar a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding-right: 20px;
+  display: inline;
+}
+
+article #like {
+  padding-right: 90px;
+  color: red;
+}
+
+/* @media only screen and (min-width: 860px) {
+  .albums {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+} */
+
+
+@media only screen and (max-width: 800px) {
+
+  .container section {
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* background: red; */
+  }
+
+  .container header,
+  .container nav,
+  .container footer {
+    grid-column: span 4;
+  }
+  .container section {
+    grid-column: span 4;
+    grid-template-columns: 100%;
+  }
+
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  /* .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+ */
+ .albums {
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ }
+
+
+
+
+
+}
+/*  end of media query*/
+
+@media only screen and (min-width: 599px) {
+
+  .container section h2 {
+                       font-size: 1vw;
+
+}
